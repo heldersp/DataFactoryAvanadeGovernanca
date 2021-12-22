@@ -50,11 +50,11 @@
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
 					},
-					"AzureDataLakeStorageexercgovern_accountKey": {
-						"value": "[parameters('AzureDataLakeStorageexercgovern_accountKey')]"
-					},
 					"AzureMySqlexercgovernSakila_connectionString": {
 						"value": "[parameters('AzureMySqlexercgovernSakila_connectionString')]"
+					},
+					"AzureDataLakeStorageexercgovern_accountKey": {
+						"value": "[parameters('AzureDataLakeStorageexercgovern_accountKey')]"
 					},
 					"MySqlexercgovern_connectionString": {
 						"value": "[parameters('MySqlexercgovern_connectionString')]"
