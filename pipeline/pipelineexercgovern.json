@@ -16,7 +16,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"items": {
-						"value": "@activity('lookupexercgovern').output",
+						"value": "@activity('lookupexercgovern').output.value",
 						"type": "Expression"
 					},
 					"activities": [
@@ -34,12 +34,7 @@
 							"userProperties": [],
 							"typeProperties": {
 								"source": {
-									"type": "AzureMySqlSource",
-									"query": {
-										"value": "@item()",
-										"type": "Expression"
-									},
-									"queryTimeout": "02:00:00"
+									"type": "MySqlSource"
 								},
 								"sink": {
 									"type": "ParquetSink",
@@ -62,11 +57,11 @@
 							},
 							"inputs": [
 								{
-									"referenceName": "AzureMySqlTable1",
+									"referenceName": "MySqlTable2",
 									"type": "DatasetReference",
 									"parameters": {
 										"tableName": {
-											"value": "@item()",
+											"value": "@item().table_name",
 											"type": "Expression"
 										}
 									}
@@ -107,7 +102,8 @@
 					"dataset": {
 						"referenceName": "MySqlTable1",
 						"type": "DatasetReference"
-					}
+					},
+					"firstRowOnly": false
 				}
 			}
 		],
