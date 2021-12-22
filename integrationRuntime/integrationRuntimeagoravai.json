@@ -1,0 +1,6 @@
+{
+	"name": "integrationRuntimeagoravai",
+	"properties": {
+		"type": "SelfHosted"
+	}
+}
